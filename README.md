@@ -16,7 +16,7 @@ Figure A. Plot of rewards when using different $g$ functions. The x-axis is the 
 Figure B. Information fidelity **with** reward hacking experiments for $g$ functions.
  
 **Analysis 1**: In reward hacking experiments, the noise is regarded as sufficiently low since the rewards are provided by an approximated oracle discriminator. The discriminator is a control variable such that $g$’s ability to preserve information can be reflected by its performance difference from the logarithmic function. Note that to maximize $I(y;\tau)$, the $\log$ function works well when/where reward noise is deemed low, e.g. in our reward hacking setup.
-Compared with the logarithm as a baseline, the linear function shows comparable performance, and others show different amounts of a performance drop [#], among which $x^6$ shows an unacceptable information loss. It can also be predicted/explained by Fig. C, where $x^6$ compress a wide range of values, say [0, 0.5], to values close to zero, leading to a dramatic ignorance of information in various observations.
+Compared with the logarithm as a baseline, the linear function shows comparable performance, and others show different amounts of a performance drop [#], among which $x^6$ shows an unacceptable information loss. It can also be predicted/explained by Fig. A, where $x^6$ compress a wide range of values, say [0, 0.5], to values close to zero, leading to a dramatic ignorance of information in various observations.
 
 
 ### Noise Impact
