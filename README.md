@@ -17,10 +17,11 @@ As is stated in the submission (lines 244--246 right column; 293--295 right colu
 
 Fortunately, with **reward hacking** where we suppress the noise with a fully trained discriminator, we can measure the information fidelity of a function $g$ by its performance difference from the logarithmic function (Note that to maximize $I(y;\tau)$, the $\log$ function works ideally in theory where noise is not an issue). 
 
-$\diamond$ Figure B. Information fidelity **with** reward hacking experiments for $g$ functions.
+
 
 <img src="resources/figure2-reward-hacking-all.jpg" width="450">
 
+$\diamond$ Figure B. Information fidelity **with** reward hacking experiments for $g$ functions.
 
 As illustrated in Fig. B (see also Fig. 7 of the paper) the linear function exhibits comparable performance to the logarithmic function as a baseline, whereas other functions result in varying degrees of performance degradation, among which $x^6$ shows an unacceptable information loss. It can also be predicted and explained by Fig. A, where $x^6$ compress a wide range of values, say [0, 0.5], to values close to zero, leading to a dramatic ignorance of information in various observations.
 
@@ -41,8 +42,9 @@ As is shown in the sub-figure (a) of Fig. C, the logarithm is sensitive to noise
 - On the other hand, as is analyzed in Eq. 14 (line 263, right column) in the paper, the impact of noise (variance) can be analyzed by examining the first- (slope) and second-order derivative (curvature). Please further check Analysis 2.
  -->
 **2) Revisions**
+
 This extensive discussion enhances our understanding of the fundamental role of $g$ regarding the IRRL joint learning process. To include this study in the revision, we will update the manuscript as below:
-* after the existing sentence *"where $g$ is an increasing function (e.g. $\log$), such that maximizing $g(·)$ leads to the maximization of the mutual information $I(y;\tau)$"* in sec. 4.1 (lines 244-246 right column), a sentence "Thus, when selecting the appropriate $g$ function, it is important to consider both its ability to transmit information and its capacity to moderate noise. The former ensures that the maximization of mutual information can be achieved efficiently, while the latter helps to reduce the impact of reward noise." will be added; 
+* after the existing sentence "where $g$ is an increasing function (e.g. $\log$), such that maximizing $g(·)$ leads to the maximization of the mutual information $I(y;\tau)$" in sec. 4.1 (lines 244-246 right column), a sentence "Thus, when selecting the appropriate $g$ function, it is important to consider both its ability to transmit information and its capacity to moderate noise. The former ensures that the maximization of mutual information can be achieved efficiently, while the latter helps to reduce the impact of reward noise." will be added; 
 * and add an appendix section titled "Analysis of $g$ functions" which introduces the discussion we reported in this response. This appendix section will be referred to in sec. 5.4, as a supplementary material of Figure 7, which only involves the $\log$ and linear $g$ function. 
 
 <!-- This additional study enhances the strength of the paper compared to the initial submission. Thank you to reviewer AqZR again for providing this valuable suggestion. -->
