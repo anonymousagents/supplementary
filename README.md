@@ -13,7 +13,7 @@ Figure A. Plot of rewards when using different $g$ functions. The x-axis is the 
 
 <img src='resources/figure2-reward-hacking-all.jpg' width='500'>
 
-Figure B. Information fidelity with reward hacking experiments for $g$ functions.
+Figure B. Information fidelity **with** reward hacking experiments for $g$ functions.
  
 **Analysis 1**: In reward hacking experiments, the noise is regarded as sufficiently low since the rewards are provided by an approximated oracle discriminator. The discriminator is a control variable such that $g$’s ability to preserve information can be reflected by its performance difference from the logarithmic function. Note that to maximize $I(y;\tau)$, the $\log$ function works well when/where reward noise is deemed low, e.g. in our reward hacking setup.
 Compared with the logarithm as a baseline, the linear function shows comparable performance, and others show different amounts of a performance drop [#], among which $x^6$ shows an unacceptable information loss. It can also be predicted/explained by Fig. C, where $x^6$ compress a wide range of values, say [0, 0.5], to values close to zero, leading to a dramatic ignorance of information in various observations.
@@ -23,6 +23,6 @@ Compared with the logarithm as a baseline, the linear function shows comparable 
 
 <img src='resources/figure-3-noise-impact.jpg' width='900'>
 
-Figure C. The impact of noise quantified with and without reward hacking for individual $g$ function. 
+Figure C. The impact of noise quantified with and **without** reward hacking for individual $g$ function. 
 
 **Analysis 2**: As is shown in a), the logarithm is sensitive to noise due to its high variance as we discussed in sec. 4 Reward Noise Moderation, while the linear form shows a smaller gap, being more robust to noise. Though there are other $g$ functions that can be more tolerant of noise, e.g. $x^6$ presents sufficiently low $\mathbb{V}(\epsilon)$ (being consistent in both theory and experimental results), their upper-performance bounds are limited by their inefficiency in information transmission (see [#] in Analysis 1 or the absolute value in Fig. C), resulting in worse performance than the linear form.
