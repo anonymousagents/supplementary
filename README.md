@@ -26,3 +26,8 @@ Compared with the logarithm as a baseline, the linear function shows comparable 
 Figure C. The impact of noise quantified with and **without** reward hacking for individual $g$ function. 
 
 **Analysis 2**: As is shown in a), the logarithm is sensitive to noise due to its high variance as we discussed in sec. 4 Reward Noise Moderation, while the linear form shows a smaller gap, being more robust to noise. Though there are other $g$ functions that can be more tolerant of noise, e.g. $x^6$ presents sufficiently low $\mathbb{V}(\epsilon)$ (being consistent in both theory and experimental results with smaller gap between solid and dashed line in (b) ), their upper-performance bounds are limited by their inefficiency in information transmission (see [#] in Analysis 1 or the absolute value in Fig. C), resulting in worse performance than the linear form.
+
+
+### Discussion
+
+When chossing a $g$ function, both information transimission and noise reduction are *necessary but not sufficient alone* conditions.
