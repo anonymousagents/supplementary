@@ -50,5 +50,7 @@ This extensive discussion enhances our understanding of the fundamental role of 
 <!-- This additional study enhances the strength of the paper compared to the initial submission. Thank you to reviewer AqZR again for providing this valuable suggestion. -->
 
 References:
+
 [1] Nowozin, Sebastian, Botond Cseke, and Ryota Tomioka. "f-gan: Training generative neural samplers using variational divergence minimization." Advances in neural information processing systems 29 (2016).
+
 [2] Ozair, Sherjil, Corey Lynch, Yoshua Bengio, Aaron Van den Oord, Sergey Levine, and Pierre Sermanet. "Wasserstein dependency measure for representation learning." Advances in Neural Information Processing Systems 32 (2019).
