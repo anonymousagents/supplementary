@@ -4,7 +4,7 @@ We addtionally present a study of the selection of $g$ functions, and show the v
 
 <img src='resources/figure1-g-functions.jpg' width='500'>
 
-Plot of rewards when using different $g$ functions. The x-axis is the posterior probability $q_\phi(y|\tau) \in [0,1]$, and the y-axis is the reward value calculated according to Eq. 9 with reward clipping
+Figure A. Plot of rewards when using different $g$ functions. The x-axis is the posterior probability $q_\phi(y|\tau) \in [0,1]$, and the y-axis is the reward value calculated according to Eq. 9 with reward clipping
 
 - Their curvation similarity to the logarithm can help understand the diverse performance from an information transmission perspective. Please further check Analysis 1 for details.
 - On the other hand, as is analyzed in Eq. 14 (line 263, right column) in the paper, the impact of noise (variance) can be analyzed by examining the first- (slope) and second-order derivative (curvature). Please further check Analysis 2.
