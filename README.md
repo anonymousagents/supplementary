@@ -1,4 +1,5 @@
 **1) Discussion**
+
 Our main focus is on addressing the issue of noisy rewards. Therefore, in our submission, we did not elaborate on the **requirements for function $g$** in great detail. However, we agree with the reviewer that a more **detailed discussion on the choice of $g$** would be beneficial and we plan to include it in the revised version of the paper. To this end, we investigated a selection of candidates for $g$ on the task of hard attention for digit recognition (cf. Sec. 3 and Fig. 3a) using the RAM model (cf. Sec. 5.1). In addition to the logarithmic and linear function, we conducted experiments on $g(x) = e^x$ and $g(x) = x^{\alpha}$, where $\alpha = 1/6, 1/3, 3, 6$, with reward hacking (to examine its information fidelity) and without reward hacking (to examine its performance in joint learning of the policy and the discriminator). We plot the mentioned candidates to further analyze them from these two perspectives. 
 
 <img src="resources/figure1-g-functions.jpg" width="450">
@@ -10,13 +11,11 @@ The key points are presented below, where we require that $g$ should be 1) able 
 
 
 
-
-
 **1.1) Information Transmission**
+
 As is stated in the submission (lines 244--246 right column; 293--295 right column), **$g$ should be chosen to preserve the information transmission ability** (from an internal discriminator to the policy network) such that maximizing the surrogate reward also leads to the maximization of mutual information $I(y;\tau)$. Measurement of information remains an open question and varies from task to task [1, 2]. A good $g$ function should at least work well where the noise is absent or low. 
 
 Fortunately, with **reward hacking** where we suppress the noise with a fully trained discriminator, we can measure the information fidelity of a function $g$ by its performance difference from the logarithmic function (Note that to maximize $I(y;\tau)$, the $\log$ function works ideally in theory where noise is not an issue). 
-
 
 
 <img src="resources/figure2-reward-hacking-all.jpg" width="450">
@@ -34,6 +33,7 @@ $\diamond$ Figure C. The impact of noise quantified with and **without** reward 
 As is shown in the sub-figure (a) of Fig. C, the logarithm is sensitive to noise due to its high variance as we discussed in Sec. 4 *Reward Noise Moderation*, while the linear function shows a smaller gap between the trials with and without reward hacking, being more robust to noise. Though there are other $g$ functions that can be more tolerant of noise, e.g., $x^2$, $x^3$, $x^6$ present sufficiently lower $\mathbb{V}(\varepsilon)$ (being consistent in both theory and experimental results with smaller gap between solid and dashed lines in sub-figure (b) ), their upper-performance bounds are limited by their inefficiency in information transmission, resulting in worse performance than the linear function. 
 
 **1.3) Summary**
+
 - When selecting a $g$ function, both its ability to **transmit information** and its capacity to **moderate noise** should be taken into consideration as they are both *necessary* conditions. 
 - Linear function performs well in transimitting information as logorithm does, while being more noise-tolerant. 
 - Our experimental results provide strong evidence that the proposed linear function is effective, which reinforces the technical contributions of our work. 
